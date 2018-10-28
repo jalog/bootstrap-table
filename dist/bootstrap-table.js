@@ -11,9 +11,6 @@
     // ======================
 
     var bootstrapVersion = 3;
-    try {
-        bootstrapVersion = parseInt($.fn.dropdown.Constructor.VERSION, 10);
-    } catch (e) {}
     var bs = {
         3: {
             buttonsClass: 'default',
@@ -34,26 +31,6 @@
             toobarDropdowItemHtml: '<li role="menuitem"><label>%s</label></li>',
             pageDropdownHtml: ['<div class="menu">', '</div>'],
             pageDropdownItemHtml: '<div class="item" data-value="%s">%s</div>'
-        },
-        4: {
-            buttonsClass: 'secondary',
-            iconsPrefix: 'fa',
-            icons: {
-                paginationSwitchDown: 'fa-toggle-down',
-                paginationSwitchUp: 'fa-toggle-up',
-                refresh: 'fa-refresh',
-                toggleOff: 'fa-toggle-off',
-                toggleOn: 'fa-toggle-on',
-                columns: 'fa-th-list',
-                detailOpen: 'fa-plus',
-                detailClose: 'fa-minus',
-                fullscreen: 'fa-arrows-alt'
-            },
-            pullClass: 'float',
-            toobarDropdowHtml: ['<div class="dropdown-menu dropdown-menu-right">', '</div>'],
-            toobarDropdowItemHtml: '<label class="dropdown-item">%s</label>',
-            pageDropdownHtml: ['<div class="dropdown-menu">', '</div>'],
-            pageDropdownItemHtml: '<a class="dropdown-item %s" href="#">%s</a>'
         }
     }[bootstrapVersion];
 
@@ -321,7 +298,7 @@
     };
 
     BootstrapTable.DEFAULTS = {
-        classes: 'table table-hover',
+        classes: 'table',
         sortClass: undefined,
         locale: undefined,
         height: undefined,
